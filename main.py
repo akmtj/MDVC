@@ -78,7 +78,7 @@ class Config(object):
             
         # training
         self.device_ids = args.device_ids
-        self.device = f'cuda:{self.device_ids[0]}'
+        self.device = f'cuda:0'
         self.train_batch_size = args.B * len(self.device_ids)
         self.inference_batch_size = args.inf_B_coeff * self.train_batch_size
         self.start_epoch = args.start_epoch # todo: pretraining
